@@ -15,7 +15,7 @@ const uri =
   process.env.MONGODB_URI ||
   'mongodb+srv://rahul123:rahul123@cluster0.lhz9e.mongodb.net/Cluster0?retryWrites=true&w=majority';
 // 'mongodb+srv://rahul123:rahul123@cluster0.lhz9e.mongodb.net/Cluster0?retryWrites=true&w=majority';
-mongoose.connect(uri, {
+mongoose.connect(uri || 'mongodb://localhost/5000', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
